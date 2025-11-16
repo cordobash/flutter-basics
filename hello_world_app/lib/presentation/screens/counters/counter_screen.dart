@@ -18,15 +18,19 @@ class _CounterScreenState extends State<CounterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '10',
-              style: TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
+              '$clickCounter',
+              style: const TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
             ),
-            Text('Clicks', style: TextStyle(fontSize: 25)),
+            Text('Click${clickCounter != 1 ? 's' : ''}', style: const TextStyle(fontSize: 25)),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => {
+          setState(() {
+            clickCounter++;
+          })
+        } ,
         child: Icon(Icons.plus_one),
       ),
     );

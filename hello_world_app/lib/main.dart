@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world_app/presentation/screens/counters/counter_functions_screen.dart';
 import 'package:hello_world_app/presentation/screens/counters/counter_screen.dart';
 
 void main(List<String> args) {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
           false, // para ocultar la etiqueta de modo desarrollo
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
       //  home: Scaffold(body: Center(child: Text('Hola mundo'))),
-      home: Scaffold(body: CounterScreen()),
+      home: Scaffold(body: CounterFunctionsScreen()),
     );
   }
 }
